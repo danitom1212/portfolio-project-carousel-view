@@ -38,21 +38,21 @@ export const ContactWidget = () => {
               <div className="p-2 bg-blue-100 rounded-full group-hover:bg-blue-200 transition-colors">
                 <Mail className="w-5 h-5 text-blue-600" />
               </div>
-              <span className="text-gray-700">contact@portfolio.com</span>
+              <span className="text-gray-700">danitom1212@gmail.com</span>
             </div>
             
             <div className="flex items-center gap-3 group">
               <div className="p-2 bg-green-100 rounded-full group-hover:bg-green-200 transition-colors">
                 <Phone className="w-5 h-5 text-green-600" />
               </div>
-              <span className="text-gray-700">+1 (555) 123-4567</span>
+              <span className="text-gray-700">0526769275</span>
             </div>
             
             <div className="flex items-center gap-3 group">
               <div className="p-2 bg-purple-100 rounded-full group-hover:bg-purple-200 transition-colors">
                 <MapPin className="w-5 h-5 text-purple-600" />
               </div>
-              <span className="text-gray-700">Tel Aviv, Israel</span>
+              <span className="text-gray-700">Haifa, Israel</span>
             </div>
           </div>
 
