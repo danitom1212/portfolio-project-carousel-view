@@ -1,8 +1,11 @@
-
 import { useState } from "react";
 import { ChevronLeft, ChevronRight, Github, ExternalLink } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
+import { SkillsWidget } from "@/components/SkillsWidget";
+import { StatsWidget } from "@/components/StatsWidget";
+import { ParticlesEffect } from "@/components/ParticlesEffect";
+import { ContactWidget } from "@/components/ContactWidget";
 
 const projects = [
   {
@@ -150,7 +153,9 @@ const ProjectCarousel = ({ project }: { project: typeof projects[0] }) => {
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50">
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 relative">
+      <ParticlesEffect />
+      
       {/* Hero Section */}
       <div className="relative h-screen flex items-center justify-center overflow-hidden">
         <div 
@@ -184,8 +189,22 @@ const Index = () => {
         </div>
       </div>
 
+      {/* Stats Widget */}
+      <div className="container mx-auto px-4 py-16 relative z-10">
+        <div className="animate-fade-in">
+          <StatsWidget />
+        </div>
+      </div>
+
+      {/* Skills Widget */}
+      <div className="container mx-auto px-4 py-16 relative z-10">
+        <div className="animate-fade-in">
+          <SkillsWidget />
+        </div>
+      </div>
+
       {/* Projects Section */}
-      <div id="projects" className="container mx-auto px-4 py-16">
+      <div id="projects" className="container mx-auto px-4 py-16 relative z-10">
         <div className="space-y-20">
           {projects.map((project, index) => (
             <div 
@@ -199,16 +218,25 @@ const Index = () => {
         </div>
       </div>
 
+      {/* Contact Section */}
+      <div className="container mx-auto px-4 py-16 relative z-10">
+        <div className="text-center mb-12">
+          <h2 className="text-5xl font-bold text-gray-800 mb-4">Contact Me</h2>
+          <p className="text-xl text-gray-600">Let's work together on something amazing!</p>
+        </div>
+        <ContactWidget />
+      </div>
+
       {/* Footer */}
-      <footer className="bg-gray-900 text-white py-12">
+      <footer className="bg-gray-900 text-white py-12 relative z-10">
         <div className="container mx-auto px-4 text-center">
-          <h3 className="text-2xl font-bold mb-4">Get In Touch</h3>
+          <h3 className="text-2xl font-bold mb-4">Thanks for visiting!</h3>
           <p className="text-gray-300 mb-6">
-            Interested in working together? Let's connect!
+            Built with React, TypeScript, and Tailwind CSS
           </p>
           <div className="flex justify-center space-x-4">
             <Button variant="outline" className="text-white border-white hover:bg-white hover:text-gray-900">
-              Contact Me
+              Back to Top
             </Button>
           </div>
         </div>
